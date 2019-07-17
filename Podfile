@@ -12,6 +12,7 @@ target 'ExperimentAppVer2' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 
   target 'ExperimentAppVer2Tests' do
     inherit! :search_paths

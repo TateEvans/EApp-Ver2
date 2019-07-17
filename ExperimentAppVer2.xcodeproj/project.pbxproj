@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5C3CB74A1D6545B26E0CB481 /* Pods_ExperimentAppVer2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B60BB7565056232E3E25CCA /* Pods_ExperimentAppVer2UITests.framework */; };
 		B1275296396ED4A284F2DA49 /* Pods_ExperimentAppVer2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADF3499C3CE04FE1CEC10A9 /* Pods_ExperimentAppVer2.framework */; };
+		B753947A22DEEA4D0059A836 /* MessagerDetailCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B753947922DEEA4D0059A836 /* MessagerDetailCellTableViewCell.swift */; };
+		B759679722DEF3A3005E940B /* PMessagerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B759679622DEF3A3005E940B /* PMessagerCollectionViewController.swift */; };
 		B7A2DF9522DDD8B000D6AF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2DF9422DDD8B000D6AF5C /* AppDelegate.swift */; };
 		B7A2DF9722DDD8B000D6AF5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2DF9622DDD8B000D6AF5C /* ViewController.swift */; };
 		B7A2DF9A22DDD8B000D6AF5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A2DF9822DDD8B000D6AF5C /* Main.storyboard */; };
@@ -26,7 +28,6 @@
 		B7AD2D0522DDF4840009FE7A /* ExperimenterNewLognViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD2D0422DDF4840009FE7A /* ExperimenterNewLognViewController.swift */; };
 		B7AD2D0722DDF4950009FE7A /* ExperimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD2D0622DDF4950009FE7A /* ExperimentViewController.swift */; };
 		B7AD2D0922DDF4A60009FE7A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD2D0822DDF4A50009FE7A /* MainTabBarController.swift */; };
-		B7AD2D0B22DDF4C40009FE7A /* ParticipantMessagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD2D0A22DDF4C30009FE7A /* ParticipantMessagerController.swift */; };
 		B7AD2D0D22DDF4D60009FE7A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AD2D0C22DDF4D60009FE7A /* SearchViewController.swift */; };
 		B7AD2D1122DDF4E30009FE7A /* E.MessagerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AD2D0E22DDF4E20009FE7A /* E.MessagerStoryboard.storyboard */; };
 		B7AD2D1222DDF4E30009FE7A /* E.ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AD2D0F22DDF4E20009FE7A /* E.ProfileStoryboard.storyboard */; };
@@ -62,6 +63,8 @@
 		8BA69499DA79E2C03D514E79 /* Pods_ExperimentAppVer2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExperimentAppVer2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90BAE52D9CD8DD7BAF8ACE82 /* Pods-ExperimentAppVer2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExperimentAppVer2UITests.debug.xcconfig"; path = "Target Support Files/Pods-ExperimentAppVer2UITests/Pods-ExperimentAppVer2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8C6A61E49A96B39730018C9 /* Pods-ExperimentAppVer2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExperimentAppVer2UITests.release.xcconfig"; path = "Target Support Files/Pods-ExperimentAppVer2UITests/Pods-ExperimentAppVer2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		B753947922DEEA4D0059A836 /* MessagerDetailCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagerDetailCellTableViewCell.swift; sourceTree = "<group>"; };
+		B759679622DEF3A3005E940B /* PMessagerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMessagerCollectionViewController.swift; sourceTree = "<group>"; };
 		B7A2DF9122DDD8B000D6AF5C /* ExperimentAppVer2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentAppVer2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A2DF9422DDD8B000D6AF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7A2DF9622DDD8B000D6AF5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +88,6 @@
 		B7AD2D0422DDF4840009FE7A /* ExperimenterNewLognViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimenterNewLognViewController.swift; sourceTree = "<group>"; };
 		B7AD2D0622DDF4950009FE7A /* ExperimentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentViewController.swift; sourceTree = "<group>"; };
 		B7AD2D0822DDF4A50009FE7A /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		B7AD2D0A22DDF4C30009FE7A /* ParticipantMessagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantMessagerController.swift; sourceTree = "<group>"; };
 		B7AD2D0C22DDF4D60009FE7A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B7AD2D0E22DDF4E20009FE7A /* E.MessagerStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = E.MessagerStoryboard.storyboard; sourceTree = "<group>"; };
 		B7AD2D0F22DDF4E20009FE7A /* E.ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = E.ProfileStoryboard.storyboard; sourceTree = "<group>"; };
@@ -167,7 +169,6 @@
 				B7A2DF9622DDD8B000D6AF5C /* ViewController.swift */,
 				B7AD2CFE22DDF43F0009FE7A /* ParticipantViewController.swift */,
 				B7AD2D0C22DDF4D60009FE7A /* SearchViewController.swift */,
-				B7AD2D0A22DDF4C30009FE7A /* ParticipantMessagerController.swift */,
 				B7AD2D0822DDF4A50009FE7A /* MainTabBarController.swift */,
 				B7AD2D0222DDF4700009FE7A /* ExperimenterLoginInViewController.swift */,
 				B7AD2D0422DDF4840009FE7A /* ExperimenterNewLognViewController.swift */,
@@ -184,9 +185,11 @@
 				B7A2DF9D22DDD8B200D6AF5C /* LaunchScreen.storyboard */,
 				B7AD2CF822DDF3F40009FE7A /* AlertController.swift */,
 				B7AD2CFC22DDF4220009FE7A /* Information.swift */,
+				B753947922DEEA4D0059A836 /* MessagerDetailCellTableViewCell.swift */,
 				B7AD2CFA22DDF3FF0009FE7A /* Cell.swift */,
 				B7A2DFC222DDDB3900D6AF5C /* GoogleService-Info.plist */,
 				B7A2DFA022DDD8B200D6AF5C /* Info.plist */,
+				B759679622DEF3A3005E940B /* PMessagerCollectionViewController.swift */,
 			);
 			path = ExperimentAppVer2;
 			sourceTree = "<group>";
@@ -465,11 +468,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B759679722DEF3A3005E940B /* PMessagerCollectionViewController.swift in Sources */,
 				B7AD2D0522DDF4840009FE7A /* ExperimenterNewLognViewController.swift in Sources */,
 				B7A2DF9722DDD8B000D6AF5C /* ViewController.swift in Sources */,
 				B7AD2D0922DDF4A60009FE7A /* MainTabBarController.swift in Sources */,
 				B7AD2D0322DDF4700009FE7A /* ExperimenterLoginInViewController.swift in Sources */,
-				B7AD2D0B22DDF4C40009FE7A /* ParticipantMessagerController.swift in Sources */,
 				B7AD2CFB22DDF3FF0009FE7A /* Cell.swift in Sources */,
 				B7AD2D0122DDF4500009FE7A /* ExperimentEditingController.swift in Sources */,
 				B7AD2D0722DDF4950009FE7A /* ExperimentViewController.swift in Sources */,
@@ -478,6 +481,7 @@
 				B7AD2CF922DDF3F40009FE7A /* AlertController.swift in Sources */,
 				B7AD2CFD22DDF4220009FE7A /* Information.swift in Sources */,
 				B7A2DF9522DDD8B000D6AF5C /* AppDelegate.swift in Sources */,
+				B753947A22DEEA4D0059A836 /* MessagerDetailCellTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
