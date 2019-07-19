@@ -8,41 +8,43 @@
 
 import UIKit
 
-private let cellID = "cellID"
-
 class PMessagerCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-
+    
+    private let cellID = "cellID"
+    
+    var messages: [Message]?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "チャット"
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+
         
         self.collectionView!.backgroundColor = UIColor.white
         self.collectionView!.alwaysBounceVertical = true
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(ExperimentCell.self, forCellWithReuseIdentifier: cellID)
+        self.collectionView!.register(MessageCell.self, forCellWithReuseIdentifier: cellID)
+        
+        setupData()
 
     }
 
-//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 3
+
+        if let count = messages?.count {
+            return count
+        }
+        return 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! MessageCell
     
-        // Configure the cell
+        if let message = messages?[indexPath.item] {
+            cell.message = message
+        }
     
         return cell
     }
@@ -54,9 +56,29 @@ class PMessagerCollectionViewController: UICollectionViewController, UICollectio
     
 }
 
-class ExperimentCell: BaseCell {
+class MessageCell: BaseCell {
     
-    let profileimageView: UIImageView = {
+    var message: Message? {
+        didSet {
+            nameLabel.text = message?.experimenter?.name
+            
+            if let profileImageName = message?.experimenter?.profileImageName {
+                profileImageView.image = UIImage(named: profileImageName)
+            }
+            
+            messageLabel.text = message?.text
+            
+            if let date = message?.date {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "HH:mm"
+                
+                timeLabel.text = dateFormatter.string(from: date)
+            }
+            
+        }
+    }
+    
+    let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 34
@@ -70,19 +92,42 @@ class ExperimentCell: BaseCell {
         return view
     }()
     
+    let nameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Experimenter's name"
+        label.font = UIFont.systemFont(ofSize: 18)
+        return label
+    }()
+    
+    let messageLabel: UILabel = {
+        let label = UILabel()
+        label.text = "you friend's message and something else..."
+        label.textColor = UIColor.darkGray
+        label.font = UIFont.systemFont(ofSize: 14)
+        return label
+    }()
+    
+    let timeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "12:05"
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.textAlignment = .right
+        return label
+    }()
+    
     override func setupViews(){
         
-        addSubview(profileimageView)
+        addSubview(profileImageView)
         addSubview(dividerLineView)
         
         setupContainerView()
         
-        profileimageView.image = UIImage(named: "icon1")
+        profileImageView.image = UIImage(named: "icon1")
         
-        addConstraintsWithFormat(format: "H:|-12-[v0(68)]", views: profileimageView)
-        addConstraintsWithFormat(format: "V:|-12-[v0(68)]", views: profileimageView)
+        addConstraintsWithFormat(format: "H:|-12-[v0(68)]", views: profileImageView)
+        addConstraintsWithFormat(format: "V:|-12-[v0(68)]", views: profileImageView)
         
-        addConstraints([NSLayoutConstraint(item: profileimageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)])
+        addConstraints([NSLayoutConstraint(item: profileImageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)])
         
         addConstraintsWithFormat(format: "H:|-82-[v0]|", views: dividerLineView)
         addConstraintsWithFormat(format: "V:[v0(1)]|", views: dividerLineView)
@@ -91,12 +136,21 @@ class ExperimentCell: BaseCell {
     
     private func setupContainerView() {
         let containerView = UIView()
-        containerView.backgroundColor = UIColor.red
+//        containerView.backgroundColor = UIColor.red
         addSubview(containerView)
         
         addConstraintsWithFormat(format: "H:|-90-[v0]|", views: containerView)
-        addConstraintsWithFormat(format: "V:[v0(70)]", views: containerView)
+        addConstraintsWithFormat(format: "V:[v0(55)]", views: containerView)
         addConstraints([NSLayoutConstraint(item: containerView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)])
+        
+        containerView.addSubview(nameLabel)
+        containerView.addSubview(messageLabel)
+        containerView.addSubview(timeLabel)
+        
+        containerView.addConstraintsWithFormat(format: "H:|[v0][v1(80)]-12-|", views: nameLabel, timeLabel)
+        containerView.addConstraintsWithFormat(format: "V:|[v0][v1(24)]|", views: nameLabel, messageLabel)
+        containerView.addConstraintsWithFormat(format: "H:|[v0]-12-|", views: messageLabel)
+        containerView.addConstraintsWithFormat(format: "V:|[v0(24)]", views: timeLabel)
     }
     
 }
@@ -131,7 +185,7 @@ class BaseCell: UICollectionViewCell{
     }
     
     func setupViews(){
-        backgroundColor = UIColor.blue
+//        backgroundColor = UIColor.blue
     }
     
 }

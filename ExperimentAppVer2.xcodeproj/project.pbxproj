@@ -35,6 +35,7 @@
 		B7AD2D1722DDF4F20009FE7A /* P.CalenderStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AD2D1422DDF4F10009FE7A /* P.CalenderStoryboard.storyboard */; };
 		B7AD2D1822DDF4F20009FE7A /* P.MessagerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AD2D1522DDF4F20009FE7A /* P.MessagerStoryboard.storyboard */; };
 		B7AD2D1922DDF4F20009FE7A /* P.ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AD2D1622DDF4F20009FE7A /* P.ProfileStoryboard.storyboard */; };
+		B7B86A5E22E18633005543C3 /* PMessagerControllerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B86A5D22E18633005543C3 /* PMessagerControllerClass.swift */; };
 		D7EC82D0245358CDE15BDFE4 /* Pods_ExperimentAppVer2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA69499DA79E2C03D514E79 /* Pods_ExperimentAppVer2Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		B7AD2D1422DDF4F10009FE7A /* P.CalenderStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = P.CalenderStoryboard.storyboard; sourceTree = "<group>"; };
 		B7AD2D1522DDF4F20009FE7A /* P.MessagerStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = P.MessagerStoryboard.storyboard; sourceTree = "<group>"; };
 		B7AD2D1622DDF4F20009FE7A /* P.ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = P.ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		B7B86A5D22E18633005543C3 /* PMessagerControllerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMessagerControllerClass.swift; sourceTree = "<group>"; };
 		DADF3499C3CE04FE1CEC10A9 /* Pods_ExperimentAppVer2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExperimentAppVer2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E745CD49242EA47B7DF985D5 /* Pods-ExperimentAppVer2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExperimentAppVer2.release.xcconfig"; path = "Target Support Files/Pods-ExperimentAppVer2/Pods-ExperimentAppVer2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +192,7 @@
 				B7A2DFC222DDDB3900D6AF5C /* GoogleService-Info.plist */,
 				B7A2DFA022DDD8B200D6AF5C /* Info.plist */,
 				B759679622DEF3A3005E940B /* PMessagerCollectionViewController.swift */,
+				B7B86A5D22E18633005543C3 /* PMessagerControllerClass.swift */,
 			);
 			path = ExperimentAppVer2;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				B7AD2CFB22DDF3FF0009FE7A /* Cell.swift in Sources */,
 				B7AD2D0122DDF4500009FE7A /* ExperimentEditingController.swift in Sources */,
 				B7AD2D0722DDF4950009FE7A /* ExperimentViewController.swift in Sources */,
+				B7B86A5E22E18633005543C3 /* PMessagerControllerClass.swift in Sources */,
 				B7AD2D0D22DDF4D60009FE7A /* SearchViewController.swift in Sources */,
 				B7AD2CFF22DDF43F0009FE7A /* ParticipantViewController.swift in Sources */,
 				B7AD2CF922DDF3F40009FE7A /* AlertController.swift in Sources */,
