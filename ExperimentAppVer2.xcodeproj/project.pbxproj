@@ -36,6 +36,7 @@
 		B7AD2D1822DDF4F20009FE7A /* P.MessagerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AD2D1522DDF4F20009FE7A /* P.MessagerStoryboard.storyboard */; };
 		B7AD2D1922DDF4F20009FE7A /* P.ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7AD2D1622DDF4F20009FE7A /* P.ProfileStoryboard.storyboard */; };
 		B7B86A5E22E18633005543C3 /* PMessagerControllerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B86A5D22E18633005543C3 /* PMessagerControllerClass.swift */; };
+		B7B86A6122E1A441005543C3 /* MessagerData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7B86A5F22E1A441005543C3 /* MessagerData.xcdatamodeld */; };
 		D7EC82D0245358CDE15BDFE4 /* Pods_ExperimentAppVer2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA69499DA79E2C03D514E79 /* Pods_ExperimentAppVer2Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		B7AD2D1522DDF4F20009FE7A /* P.MessagerStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = P.MessagerStoryboard.storyboard; sourceTree = "<group>"; };
 		B7AD2D1622DDF4F20009FE7A /* P.ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = P.ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		B7B86A5D22E18633005543C3 /* PMessagerControllerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMessagerControllerClass.swift; sourceTree = "<group>"; };
+		B7B86A6022E1A441005543C3 /* MessagerData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MessagerData.xcdatamodel; sourceTree = "<group>"; };
 		DADF3499C3CE04FE1CEC10A9 /* Pods_ExperimentAppVer2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExperimentAppVer2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E745CD49242EA47B7DF985D5 /* Pods-ExperimentAppVer2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExperimentAppVer2.release.xcconfig"; path = "Target Support Files/Pods-ExperimentAppVer2/Pods-ExperimentAppVer2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +195,7 @@
 				B7A2DFA022DDD8B200D6AF5C /* Info.plist */,
 				B759679622DEF3A3005E940B /* PMessagerCollectionViewController.swift */,
 				B7B86A5D22E18633005543C3 /* PMessagerControllerClass.swift */,
+				B7B86A5F22E1A441005543C3 /* MessagerData.xcdatamodeld */,
 			);
 			path = ExperimentAppVer2;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				B7A2DFA122DDD8B200D6AF5C /* Sources */,
 				B7A2DFA222DDD8B200D6AF5C /* Frameworks */,
 				B7A2DFA322DDD8B200D6AF5C /* Resources */,
+				84F43956B4E49191EC5BC52C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -447,6 +451,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		84F43956B4E49191EC5BC52C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExperimentAppVer2Tests/Pods-ExperimentAppVer2Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExperimentAppVer2Tests/Pods-ExperimentAppVer2Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExperimentAppVer2Tests/Pods-ExperimentAppVer2Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EDA69B66CCFE63B3F9F75337 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -473,6 +494,7 @@
 			files = (
 				B759679722DEF3A3005E940B /* PMessagerCollectionViewController.swift in Sources */,
 				B7AD2D0522DDF4840009FE7A /* ExperimenterNewLognViewController.swift in Sources */,
+				B7B86A6122E1A441005543C3 /* MessagerData.xcdatamodeld in Sources */,
 				B7A2DF9722DDD8B000D6AF5C /* ViewController.swift in Sources */,
 				B7AD2D0922DDF4A60009FE7A /* MainTabBarController.swift in Sources */,
 				B7AD2D0322DDF4700009FE7A /* ExperimenterLoginInViewController.swift in Sources */,
@@ -820,6 +842,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B7B86A5F22E1A441005543C3 /* MessagerData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B7B86A6022E1A441005543C3 /* MessagerData.xcdatamodel */,
+			);
+			currentVersion = B7B86A6022E1A441005543C3 /* MessagerData.xcdatamodel */;
+			path = MessagerData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B7A2DF8922DDD8B000D6AF5C /* Project object */;
 }

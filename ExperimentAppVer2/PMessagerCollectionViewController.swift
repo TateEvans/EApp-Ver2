@@ -7,12 +7,13 @@
 //
 
 import UIKit
+//import RealmSwift
 
 class PMessagerCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private let cellID = "cellID"
     
-    var messages: [Message]?
+    var messages: [Message]? = []
     
     
     override func viewDidLoad() {
@@ -28,7 +29,7 @@ class PMessagerCollectionViewController: UICollectionViewController, UICollectio
         self.collectionView!.register(MessageCell.self, forCellWithReuseIdentifier: cellID)
         
         setupData()
-
+        
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -60,9 +61,9 @@ class MessageCell: BaseCell {
     
     var message: Message? {
         didSet {
-            nameLabel.text = message?.experimenter?.name
+            nameLabel.text = message?.contacts?.name
             
-            if let profileImageName = message?.experimenter?.profileImageName {
+            if let profileImageName = message?.contacts?.profileImageName {
                 profileImageView.image = UIImage(named: profileImageName)
             }
             

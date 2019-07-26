@@ -7,53 +7,66 @@
 //
 
 import UIKit
+//import RealmSwift
 
-class ExperimenterMember: NSObject {
-    
+class Contacts: NSObject {
+
     var name: String?
     var profileImageName: String?
-    
+
 }
 
 class Message: NSObject {
-    
+
     var text: String?
     var date: Date?
-    
-    var experimenter: ExperimenterMember?
-    
+
+    var contacts: Contacts?
+
 }
 
 extension PMessagerCollectionViewController {
     
     func setupData() {
         
-        let ryan = ExperimenterMember()
+        let ryan = Contacts()
         ryan.name = "Ryan"
         ryan.profileImageName = "icon1"
-        let message1 = Message()
-        message1.experimenter = ryan
-        message1.text = "Hello, my name is Ryan. I want to ask something about our experiment..."
-        message1.date = Date()
         
-        let nike = ExperimenterMember()
+        
+        let nike = Contacts()
         nike.name = "Nike"
         nike.profileImageName = "icon2"
-        let message2 = Message()
-        message2.experimenter = nike
-        message2.text = "There is something wrong with my computer, so that..."
-        message2.date = Date()
+
         
-        let tate = ExperimenterMember()
+        let tate = Contacts()
         tate.name = "Tate"
         tate.profileImageName = "icon3"
-        let message3 = Message()
-        message3.experimenter = tate
-        message3.text = "Thank you for helping my research! And I just want to..."
-        message3.date = Date()
         
-        messages = [message1, message2, message3]
+        
+        createMessageWithText(text: "Hello, my name is Ryan. I want to ask something about our experiment...", experimenter: ryan, minutesAgo: 2)
+        createMessageWithText(text: "There is something wrong with my computer, so that...", experimenter: nike, minutesAgo: 1)
+        createMessageWithText(text: "Thank you for helping my research! And I just want to...", experimenter: tate, minutesAgo: 0)
+        
+//        let realm = try! Realm()
+//
+//        print(Realm.Configuration.defaultConfiguration.fileURL)
+//
+//        try! realm.write {
+//            realm.add(ryan)
+//            realm.add(nike)
+//            realm.add(tate)
+//        }
+
+        
     }
 
+    private func createMessageWithText(text: String, experimenter: Contacts, minutesAgo: Double) {
+        let message = Message()
+        message.text = text
+        message.contacts = experimenter
+        message.date = Date().addingTimeInterval(-minutesAgo * 60)
+        messages?.append(message)
+    }
     
 }
